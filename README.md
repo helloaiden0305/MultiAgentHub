@@ -1,6 +1,6 @@
 # XZY ODM Agent Hub
 
-面向 ODM 研发测试场景的 AI Agent 公共能力治理 Demo。
+内部 AI 网关与 MCP 公共服务治理平台
 
 以“业务 Agent + 内部 MCP 服务网关 + AI 公共服务”为核心结构，展示模型接入、会话记忆、Prompt 管理、项目身份、调用链、模型路由与流式治理如何由平台能力统一承接。
 
