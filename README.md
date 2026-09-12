@@ -88,7 +88,7 @@ uv sync
 cp .env.example .env
 ```
 
-至少填写 `ARK_API_KEY`、`ARK_CHAT_MODEL` 和 `ARK_EMBEDDING_MODEL`；其余变量的用途见 `.env.example` 注释。完成后：
+`.env.example` 已列出模型服务、网关治理、服务台连接和可选备用 Endpoint 的配置项。至少填写 `ARK_API_KEY`、`ARK_CHAT_MODEL` 和 `ARK_EMBEDDING_MODEL`；其余变量按文件内注释配置。完成后：
 
 ```bash
 ./start.sh
