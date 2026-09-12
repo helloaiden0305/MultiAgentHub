@@ -1,0 +1,18 @@
+# LLM 网关配置 — 模型列表与路由规则
+#
+# 逻辑模型名 → 实际 Endpoint 的映射通过环境变量 ARK_CHAT_MODEL 控制。
+# 本配置定义各模型的默认参数和路由策略。
+# 生产环境中可为不同逻辑模型配置不同的 Endpoint ID。
+
+models:
+  doubao-pro:
+    description: "豆包轻量旗舰模型，速度快适合日常对话"
+    max_tokens: 4096
+    temperature: 0.7
+  doubao-lite:
+    description: "豆包轻量模型，响应快、成本低，适合简单任务"
+    max_tokens: 2048
+    temperature: 0.5
+
+routing:
+  default: "doubao-pro"

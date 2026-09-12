@@ -1,0 +1,23 @@
+# Local learning and review materials kept on this machine, not for public GitHub display.
+chapters/
+demo/
+docs/
+ARCHITECTURE.md
+企业级AI网关方案对比分析.md
+MCP多项目共享服务教程大纲.md
+demo-project-roadmap.md
+ODM_AGENT_CLUSTER_REWORK_PRD.md
+改造4.log
+mcp-demo/*PRD.md
+
+# Local secrets and runtime artifacts.
+.env
+*.log
+
+# Python / Node generated files.
+__pycache__/
+.venv/
+node_modules/
+
+# macOS metadata.
+.DS_Store

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XZY 网关服务台</title>
+  <link rel="stylesheet" href="/static/style.css?v=20260912-stream-verification">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="服务台导航">
+      <div class="brand">
+        <span class="brand-kicker">XZY ODM AGENT HUB</span>
+        <strong>网关服务台</strong>
+        <span class="brand-subtitle">内部 MCP 服务网关</span>
+      </div>
+      <nav class="nav-list" id="navList">
+        <button class="nav-item active" data-view="overview" type="button">概览</button>
+        <button class="nav-item" data-view="external" type="button">外部网关</button>
+        <button class="nav-item" data-view="services" type="button">服务注册</button>
+        <button class="nav-item" data-view="projects" type="button">项目与身份</button>
+        <button class="nav-item" data-view="traces" type="button">调用链</button>
+        <button class="nav-item" data-view="usage" type="button">用量与成本</button>
+        <button class="nav-item" data-view="models" type="button">模型服务</button>
+        <button class="nav-item" data-view="reliability" type="button">可靠性治理</button>
+        <button class="nav-item" data-view="verification" type="button">流式验证</button>
+        <button class="nav-item" data-view="capabilities" type="button">能力矩阵</button>
+        <button class="nav-item" data-view="apps" type="button">业务应用</button>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span>本地演示控制台</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <div class="breadcrumb">控制面 / <span id="viewName">概览</span></div>
+          <h1 id="pageTitle">网关运行概览</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="environment-badge">LOCAL</span>
+          <button class="refresh-button" id="refreshButton" type="button">刷新数据</button>
+        </div>
+      </header>
+      <section id="viewRoot" class="view-root" aria-live="polite"></section>
+    </main>
+  </div>
+  <script src="/static/app.js?v=20260912-stream-verification-replayfix"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# 内部 MCP 服务网关配置 — 服务注册表 + 项目认证 + 配额
+#
+# services: 各 MCP 共享服务的 Streamable HTTP 地址
+# projects: 业务项目的 API Key 和 Token 配额
+
+external_gateway:
+  type: apisix
+  enabled: false
+  status: reserved
+  description: "企业架构预留的外部 API Gateway；当前本地 Demo 由 FastAPI 服务直接提供 HTTP 入口。"
+
+services:
+  llm-gateway:
+    url: "http://127.0.0.1:9001/mcp"
+  memory-service:
+    url: "http://127.0.0.1:9003/mcp"
+  prompt-hub:
+    url: "http://127.0.0.1:9004/mcp"
+
+projects:
+  odm-report-agent:
+    api_key: "xzy-odm-report-agent-key"
+    quota:
+      daily_tokens: 100000

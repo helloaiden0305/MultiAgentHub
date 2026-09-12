@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XZY ODM Agent Hub - 测试报告与问题复盘助手</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">XZY ODM Agent Hub</div>
+      <h1>测试报告与问题复盘助手</h1>
+    </div>
+    <div class="topbar-actions">
+      <label for="styleSelect">输出风格</label>
+      <select id="styleSelect">
+        <option value="结构化" selected>结构化</option>
+        <option value="简洁">简洁</option>
+        <option value="详细">详细</option>
+        <option value="复盘报告">复盘报告</option>
+        <option value="风险说明">风险说明</option>
+      </select>
+      <button type="button" onclick="window.location.assign('http://127.0.0.1:8500')">网关服务台</button>
+      <button type="button" onclick="clearMemory()">清空记忆</button>
+      <button type="button" onclick="showProfile()">工程上下文</button>
+      <button type="button" onclick="newSession()">新建会话</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="side-panel">
+      <section class="panel-block">
+        <h2>调用链路</h2>
+        <div class="pipeline" aria-label="Gateway MCP 调用链路">
+          <span>Gateway</span>
+          <span>Memory</span>
+          <span>Prompt</span>
+          <span>LLM</span>
+        </div>
+      </section>
+
+      <section class="panel-block">
+        <h2>生成能力</h2>
+        <div class="tag-grid">
+          <span>测试报告</span>
+          <span>缺陷复盘</span>
+          <span>日志摘要</span>
+          <span>风险说明</span>
+          <span>回归记录</span>
+        </div>
+      </section>
+
+      <section class="panel-block">
+        <h2>示例需求</h2>
+        <div class="examples">
+          <button type="button" data-example="根据这段蓝牙问题描述生成测试报告。">根据这段蓝牙问题描述生成测试报告。</button>
+          <button type="button" data-example="把这段缺陷现象整理成问题复盘。">把这段缺陷现象整理成问题复盘。</button>
+          <button type="button" data-example="根据日志摘要输出风险说明。">根据日志摘要输出风险说明。</button>
+          <button type="button" data-example="生成一份回归验证记录模板。">生成一份回归验证记录模板。</button>
+        </div>
+      </section>
+    </aside>
+
+    <section class="chat-panel">
+      <div class="session-bar">
+        <span id="sessionInfo">会话：未开始</span>
+        <span>项目：odm-report-agent</span>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="msg bot">
+          <div class="label">助手</div>
+          <div class="bubble">提供测试记录、缺陷现象或日志摘要后，我会生成结构化报告、复盘初稿、风险说明或回归验证记录。</div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <textarea id="input" placeholder="输入需求，例如：生成蓝牙问题测试报告" rows="1"></textarea>
+        <button id="sendBtn" type="button" onclick="send()">发送</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="/static/app.js?v=20260911-phase3-stream"></script>
+</body>
+</html>
