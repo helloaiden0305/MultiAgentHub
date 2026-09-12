@@ -23,7 +23,7 @@
 flowchart TB
     user["业务用户 / 业务前端"]
     edge["外部 API Gateway<br/>APISIX / AGW"]
-    agent["业务 Agent<br/>ODM 测试报告与问题复盘助手"]
+    agent["业务 Agent"]
     gateway["内部 MCP 服务网关<br/>身份 · 订阅 · 配额 · 调用链"]
 
     user --> edge --> agent --> gateway
