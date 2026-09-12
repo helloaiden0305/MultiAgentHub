@@ -88,7 +88,7 @@ uv sync
 cp .env.example .env
 ```
 
-在 `.env` 配置可用的大模型接入信息后：
+至少填写 `ARK_API_KEY`、`ARK_CHAT_MODEL` 和 `ARK_EMBEDDING_MODEL`；其余变量的用途见 `.env.example` 注释。完成后：
 
 ```bash
 ./start.sh
