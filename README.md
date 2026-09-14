@@ -17,6 +17,18 @@
 
 服务台：服务状态、调用链、Token 用量、路由结果与流式验证均来自本地运行中的真实服务。
 
+### 网关服务台概览
+
+![网关服务台概览](assets/gateway-console-overview.jpg)
+
+### 服务注册与健康状态
+
+![服务注册与健康状态](assets/gateway-service-registry.jpg)
+
+### Endpoint 可靠性与回退
+
+![Endpoint 可靠性与回退](assets/gateway-reliability-governance.jpg)
+
 ## 架构总览
 
 ```mermaid
